@@ -179,12 +179,16 @@ function createViz(data) {
     .append("g")
     .attr("class", "headline-group")
     .attr("text-anchor", "middle")
+    .attr("dominant-baseline", "middle")
     .attr("style", "font-size: 1.5em;");
 
-  headlineGroup.append("text").text("Daily average temperature range");
+  headlineGroup
+    .append("text")
+    .text("Daily average temperature range")
+    .attr("dy", "-1em");
   headlineGroup
     .append("text")
     .text("and recorded extremes in San Francisco")
-    .attr("dy", "1em");
-  headlineGroup.append("text").text("from 1999–2018").attr("dy", "2em");
+    .attr("dy", "0em");
+  headlineGroup.append("text").text("from 1999–2018").attr("dy", "1em");
 }
