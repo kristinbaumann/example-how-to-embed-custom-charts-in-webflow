@@ -68,10 +68,7 @@ function createViz(data) {
     .attr("width", width)
     .attr("height", height)
     .attr("viewBox", [-width / 2, -height / 2, width, height])
-    .attr(
-      "style",
-      "width: 100%; height: auto; font: 10px sans-serif; background-color: transparent; border: 1px solid black"
-    )
+    .attr("style", "width: 100%; height: auto; font-size: 10px;")
     .attr("stroke-linejoin", "round")
     .attr("stroke-linecap", "round");
 
@@ -112,7 +109,7 @@ function createViz(data) {
       g
         .append("path")
         .attr("stroke", "#000")
-        .attr("stroke-opacity", 0.2)
+        .attr("stroke-opacity", 0.15)
         .attr(
           "d",
           (d) => `
@@ -159,7 +156,7 @@ function createViz(data) {
         .append("circle")
         .attr("fill", "none")
         .attr("stroke", "currentColor")
-        .attr("stroke-opacity", 0.2)
+        .attr("stroke-opacity", 0.15)
         .attr("r", y)
     )
     .call((g) =>
